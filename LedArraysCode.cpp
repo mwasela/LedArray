@@ -38,36 +38,22 @@ void loop() {
    state = 3;
  if (digitalRead(button4) == HIGH)
    state = 4;
- 
-switch(expression) {
-   case constant-expression  :
-      statement(s);
-      break; //optional
-   case constant-expression  :
-      statement(s);
-      break; //optional
-  
-   // you can have any number of case statements.
-   default : //Optional
-      statement(s);
-}
-
 
  switch(state){
 
     case 1:
-      if (state == 1){
-        digitalWrite(ledPins[0] , HIGH);
+      if (state == 1){                      //If Button 1 is presssed
+        digitalWrite(ledPins[0] , HIGH);    //Turn on Inidicator 1 for 7 Seconds then
         delay(7000);
-        digitalWrite(ledPins[0] , OFF);
+        digitalWrite(ledPins[0] , OFF);     //Turn it Off
         break;
       }  
 
     case 2:
-      if (state == 2){
-        digitalWrite(ledPins[1] , HIGH);
+      if (state == 2){                      //If Button 2 is presssed
+        digitalWrite(ledPins[1] , HIGH);    //Turn on Inidicator 1 for 7 Seconds then
         delay(7000);
-        digitalWrite(ledPins[1] , OFF);
+        digitalWrite(ledPins[1] , OFF);     //Turn it off
         break;
       }
 
@@ -88,10 +74,10 @@ switch(expression) {
       }  
 
     default:  
-       for (int thisPin = 0; thisPin < pinCount; thisPin++) {
-    // turn the pin off:
+       for (int thisPin = 0; thisPin < pinCount; thisPin++) {     
+    // turn the pin off:                            If no Button is Pressed Maintain All LEDs of if they are off
          digitalWrite(ledPins, OFF);
-    delay(5000); 
+    delay(1000); 
       }
 
 }.
