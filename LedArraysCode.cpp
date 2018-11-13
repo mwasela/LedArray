@@ -1,7 +1,7 @@
 
   
 int ledPins[] = { 2, 3, 4, 5};       // an array of pin numbers to which LEDs are attached
-int pinCount = 6;                       // the number of pins (i.e. the length of the array)
+int pinCount = 4;                       // the number of pins (i.e. the length of the array)
 
 int button1 = 22;
 int button2 = 24;
